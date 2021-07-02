@@ -2,7 +2,7 @@ import React from 'react';
 import { GoHome } from 'react-icons/go';
 import { BsPerson, BsGear, BsEye } from 'react-icons/bs';
 import { BiMessageSquareDetail } from 'react-icons/bi';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
@@ -97,7 +97,6 @@ const NavLinks = styled(NavLink)`
 			font-size: 0.6rem;
 			bottom: -11px;
 			left: 50%;
-
 			transform: translate(-50%, -50%);
 		}
 	}

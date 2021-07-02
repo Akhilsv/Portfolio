@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { keyframes, ThemeProvider } from 'styled-components';
 import './App.css';
 import Home from './Pages/Home';
 import Menu from './components/Menu';
@@ -70,6 +70,14 @@ function App() {
 		</>
 	);
 }
+const iconAnimation = keyframes`
+from{
+	transform: rotate(0deg);
+}
+to{
+	transform: rotate(360deg);
+}
+`;
 const Body = styled.div`
 	background-color: ${(p) => p.theme.background};
 	height: 100vh;
@@ -89,8 +97,7 @@ const OutLine = styled.div`
 	border-color: ${(p) => p.theme.border};
 	border-radius: 50px;
 	transition: background-color 1s;
-	transition: all 0.5s;
-
+	transition: all 0.5s ease;
 	@media (max-width: 700px) {
 		width: 100vw;
 		height: 100vh;
@@ -114,16 +121,15 @@ const Toggle = styled.div`
 	& svg {
 		color: ${(p) => p.theme.color};
 		font-size: 1.7rem;
-		transition: all 1s;
+		transition: all 0.5s;
+		animation: ${iconAnimation} 1s ease-in-out;
 		&:hover {
 			transform: rotate(360deg);
 		}
 	}
-
 	@media (max-width: 700px) {
 		top: 2%;
 		left: 80%;
 	}
 `;
-
 export default App;
