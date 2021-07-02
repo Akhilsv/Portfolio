@@ -47,7 +47,6 @@ const MenuHolder = styled.ul`
 	width: 50px;
 	position: absolute;
 	right: 0.6%;
-
 	height: 50vh;
 	display: flex;
 	flex-direction: column;
@@ -57,6 +56,7 @@ const MenuHolder = styled.ul`
 	border-radius: 20px;
 	transition: all 0.5s;
 	@media (max-width: 700px) {
+		position: fixed;
 		margin-right: 0;
 		border-radius: 0;
 		bottom: 0;
