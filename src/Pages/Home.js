@@ -41,7 +41,7 @@ const Homeholder = styled(motion.div)`
 	justify-content: flex-start;
 	align-items: center;
 	@media (max-width: 700px) {
-		display: none;
+		width: 95vw;
 	}
 `;
 const Holders = styled.div`
@@ -50,11 +50,21 @@ const Holders = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	padding-left: 70px;
+	@media (max-width: 700px) {
+		padding-left: 20px;
+	}
+	
 `;
 const H1 = styled.h1`
 	font-size: 5rem;
 	font-weight: 600;
 	padding-bottom: 10px;
+	@media (max-width: 700px) {
+		font-size: 3.5rem;
+	}
+	@media (max-width: 400px) {
+		font-size: 3rem;
+	}
 `;
 const P = styled.p`
 	font-size: 2rem;
@@ -67,11 +77,13 @@ const IconHolder = styled.ul`
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;
+
 	& li {
 		text-decoration: none;
 		font-size: 3rem;
+		transition: color 0.5s ease;
 		&:hover {
-			color: red;
+			color: #6d6d6d;
 		}
 	}
 `;

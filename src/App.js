@@ -130,7 +130,9 @@ const Toggle = styled.div`
 	}
 	@media (max-width: 700px) {
 		top: 2%;
-		left: 80%;
+		left: 83%;
+		width: 50px;
+		height: 50px;
 	}
 `;
 export default App;

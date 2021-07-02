@@ -75,6 +75,7 @@ const MenuHolder = styled.ul`
 		font-weight: 900;
 
 		&:hover {
+			
 			color: red;
 		}
 	}
