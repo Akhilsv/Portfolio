@@ -41,6 +41,7 @@ const Menu = () => {
 };
 
 const MenuHolder = styled.ul`
+	user-select: none;
 	z-index: 100;
 	background-color: ${(p) => p.theme.color};
 	font-size: 1.5rem;

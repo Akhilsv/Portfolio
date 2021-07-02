@@ -105,6 +105,7 @@ const OutLine = styled.div`
 	}
 `;
 const Toggle = styled.div`
+	user-select: none;
 	cursor: pointer;
 	position: absolute;
 	top: 8%;
