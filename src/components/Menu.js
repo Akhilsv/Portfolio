@@ -10,28 +10,28 @@ const Menu = () => {
 		<>
 			<MenuHolder>
 				<li>
-					<NavLinks activeClassName='selected' to='/home'>
+					<NavLinks activeClassName='selected' to='/home' name='Home'>
 						<GoHome />
 					</NavLinks>
 				</li>
 
 				<li>
-					<NavLinks activeClassName='selected' to='/about'>
+					<NavLinks activeClassName='selected' to='/about' name='About'>
 						<BsPerson />
 					</NavLinks>
 				</li>
 				<li>
-					<NavLinks activeClassName='selected' to='/skills'>
+					<NavLinks activeClassName='selected' to='/skills' name='Skills'>
 						<BsGear />
 					</NavLinks>
 				</li>
 				<li>
-					<NavLinks  to='/home'>
+					<NavLinks to='/home' name='Work'>
 						<BsEye />
 					</NavLinks>
 				</li>
 				<li>
-					<NavLinks to='/home'>
+					<NavLinks to='/home' name='Contact'>
 						<BiMessageSquareDetail />
 					</NavLinks>
 				</li>
@@ -72,16 +72,35 @@ const MenuHolder = styled.ul`
 	& li {
 		text-decoration: none;
 		font-weight: 900;
+
 		&:hover {
 			color: red;
 		}
 	}
 `;
 const NavLinks = styled(NavLink)`
+	font-size: 1.8rem;
+	font-weight: 800;
 	text-decoration: none;
-	color: white;
-	font-size: 1.5rem;
-	transition: all 0.4s;
+	color: #919191e6;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.5s ease;
+	@media (max-width: 700px) {
+		&::after {
+			font-family: 'Raleway', sans-serif;
+			width: max-content;
+			font-weight: 600;
+			letter-spacing: 1px;
+			content: '${(prop) => prop.name}';
+			position: absolute;
+			font-size: 0.6rem;
+			bottom: -11px;
+			left: 50%;
+
+			transform: translate(-50%, -50%);
+		}
+	}
 
 	&.selected {
 		color: #f151ff;
