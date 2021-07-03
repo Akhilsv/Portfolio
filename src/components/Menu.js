@@ -104,7 +104,7 @@ const NavLinks = styled(NavLink)`
 	}
 
 	&.selected {
-		color: #f151ff;
+		color: #777;
 		opacity: 0.7;
 	}
 `;

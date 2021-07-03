@@ -70,6 +70,9 @@ const P = styled.p`
 	font-size: 2rem;
 	font-weight: 400;
 	padding-bottom: 20px;
+	@media (max-width: 700px) {
+		font-size: 1.7rem;
+	}
 `;
 const IconHolder = styled.ul`
 	width: 150px;
