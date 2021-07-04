@@ -5,11 +5,12 @@ import Menu from './components/Menu';
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
-
 import About from './Pages/About';
 import Skills from './Pages/Skills';
 import { useState } from 'react';
 import { darkTheme, lightTheme } from './Theme';
+import { Toggle } from './components/styledItems/ThemeToggleBtn';
+import { Logo } from './components/styledItems/Logo';
 
 function App() {
 	const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
 	const pageTransition = {
 		type: 'spring',
 		stiffness: 200,
+		duration:0.5,
 	};
 	const changeTheme = () => {
 		setIsDarkMode(!isDarkMode);
@@ -44,7 +46,7 @@ function App() {
 					<Toggle onClick={changeTheme}>
 						<p>{isDarkMode ? <FiMoon /> : <FiSun />}</p>
 					</Toggle>
-
+	
 					<Menu />
 					<OutLine>
 						<Logo>
@@ -90,17 +92,10 @@ function App() {
 		</>
 	);
 }
-const iconAnimation = keyframes`
-from{
-	transform:scale(0.5) rotate(0deg);
-}
-to{
-	transform:scale(1)  rotate(360deg);
-}
-`;
+
 const Body = styled.div`
 	background-color: ${(p) => p.theme.background};
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
@@ -120,63 +115,9 @@ const OutLine = styled.div`
 	transition: all 0.5s ease;
 	@media (max-width: 700px) {
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		border: none;
 	}
 `;
-const Toggle = styled.div`
-	user-select: none;
-	cursor: pointer;
-	position: absolute;
-	top: 8%;
-	left: 5%;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	border: solid 3px ${(p) => p.theme.border};
 
-	z-index: 100;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	& svg {
-		color: ${(p) => p.theme.color};
-		font-size: 1.7rem;
-		transition: all 0.5s;
-		animation: ${iconAnimation} 1s ease-in-out;
-		&:hover {
-			transform: rotate(360deg);
-		}
-	}
-	@media (max-width: 700px) {
-		top: 2%;
-		left: 83%;
-		width: 50px;
-		height: 50px;
-	}
-`;
-const Logo = styled.div`
-	position: absolute;
-	top: 4%;
-	right: 2%;
-	@media (max-width: 700px) {
-		top: 3%;
-		left: 3%;
-	}
-
-	svg {
-		width: 50px;
-		height: 50px;
-		@media (max-width: 700px) {
-			width: 40px;
-			height: 40px;
-		}
-	}
-	path {
-		transition: fill 0.5s;
-
-		fill: ${(p) => p.theme.color};
-	}
-`;
 export default App;

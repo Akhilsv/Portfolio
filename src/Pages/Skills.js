@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import Progress from '../components/skills/Progress';
 const Skills = ({ framer, transition }) => {
 	return (
 		<SkillsHolder
@@ -10,18 +11,22 @@ const Skills = ({ framer, transition }) => {
 			exit='out'
 			variants={framer}
 			transition={transition}>
-			<h1>Skills</h1>
+			<Progress />
 		</SkillsHolder>
 	);
 };
 
 const SkillsHolder = styled(motion.div)`
-	color: var(--fontColor);
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	padding-top: 30px;
+	@media (max-width: 700px) {
+		min-height: 100vh;
+		overflow: scroll;
+	}
 `;
 export default Skills;

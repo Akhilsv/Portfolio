@@ -2,6 +2,7 @@ export const lightTheme = {
     background: "#d1d1d1",
     color: "#0e0e0e",
     border: "#0e0e0e"
+    
 }
 export const darkTheme = {
 	background: '#252525',
