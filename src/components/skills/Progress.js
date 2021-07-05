@@ -13,7 +13,11 @@ const Progress = () => {
 					<Bar name='Html' percentage='80' />
 					<Bar name='Css (SASS)' percentage='90' />
 				</ProgressBar>
-				
+				<ProgressBar>
+					<RoundBar></RoundBar>
+					<RoundBar></RoundBar>
+					<RoundBar></RoundBar>
+				</ProgressBar>
 			</ProgressHolder>
 		</>
 	);
@@ -24,24 +28,32 @@ const ProgressHolder = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	@media (max-width: 700px) {
 		flex-direction: column;
-
-		overflow: scroll;
+		height: 100%;
 	}
 `;
 const ProgressBar = styled.div`
 	width: 45%;
-	height: 100%;
+	height: 90%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 	@media (max-width: 700px) {
 		width: 90%;
-	
+		height: 60vh;
 	}
+`;
+const RoundBar = styled.div`
+	width: 180px;
+	height: 180px;
+	background-color: red;
+	border-radius: 50%;
+	border: solid 10px transparent;
+	position: relative;
+	
 `;
 
 export default Progress;

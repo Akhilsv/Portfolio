@@ -9,11 +9,9 @@ to{
 `;
 
 export const Toggle = styled.div`
-	user-select: none;
+
 	cursor: pointer;
-	position: absolute;
-	top: 8%;
-	left: 5%;
+	
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -33,8 +31,7 @@ export const Toggle = styled.div`
 		}
 	}
 	@media (max-width: 700px) {
-		top: 2%;
-		left: 85%;
+	
 		width: 50px;
 		height: 50px;
 	}

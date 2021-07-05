@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
 export const Logo = styled.div`
-	position: absolute;
-	top: 4%;
-	right: 2%;
-	@media (max-width: 700px) {
-		top: 3%;
-		left: 3%;
-	}
+	
 
 	svg {
 		width: 50px;

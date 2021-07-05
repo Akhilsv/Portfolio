@@ -33,9 +33,8 @@ const Home = ({ framer, transition }) => {
 const Homeholder = styled(motion.div)`
 	color: ${(p) => p.theme.color};
 	transition: color 0.5s;
-	position: absolute;
 	margin: 50px 0px 50px 10px;
-	width: 600px;
+	width:100%;
 	height: 80%;
 	display: flex;
 	justify-content: flex-start;
