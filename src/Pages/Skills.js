@@ -17,14 +17,11 @@ const Skills = ({ framer, transition }) => {
 };
 
 const SkillsHolder = styled(motion.div)`
-	position: absolute;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding-top: 30px;
-
 	@media (max-width: 700px) {
 	
 	}

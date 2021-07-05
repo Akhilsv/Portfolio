@@ -35,7 +35,7 @@ const Homeholder = styled(motion.div)`
 	transition: color 0.5s;
 	margin: 50px 0px 50px 10px;
 	width:100%;
-	height: 80%;
+	height: 50%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;

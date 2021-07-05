@@ -13,11 +13,7 @@ const Progress = () => {
 					<Bar name='Html' percentage='80' />
 					<Bar name='Css (SASS)' percentage='90' />
 				</ProgressBar>
-				<ProgressBar>
-					<RoundBar></RoundBar>
-					<RoundBar></RoundBar>
-					<RoundBar></RoundBar>
-				</ProgressBar>
+				
 			</ProgressHolder>
 		</>
 	);
@@ -26,9 +22,10 @@ const ProgressHolder = styled.div`
 	width: 100%;
 	height: 80%;
 	display: flex;
-	justify-content: center;
+
 	align-items: center;
 	@media (max-width: 700px) {
+	
 		flex-direction: column;
 		height: 100%;
 	}

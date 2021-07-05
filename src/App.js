@@ -90,7 +90,7 @@ const OutLine = styled.div`
 	transition: background-color 1s;
 	transition: all 0.5s ease;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
 	@media (max-width: 700px) {
