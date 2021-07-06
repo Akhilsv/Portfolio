@@ -40,10 +40,11 @@ export const Nav = ({ click, theme }) => {
 const NavBar = styled.div`
 	width: 100%;
 	height: 90px;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 30px 30px 0px 30px;
-	
+	@media (max-width: 700px) {
+		height: 50px;
+	}
 `;
