@@ -66,9 +66,9 @@ const renderActiveShape = (props) => {
 			/>
 			<circle cx={ex} cy={ey} r={2} fill={fill} stroke='none' />
 			<text
-				x={ex + (cos >= 0 ? 1 : -1) * 12}
+				x={ex + (cos >= 0 ? 1 : -1) * 10}
 				y={ey}
-				dy={18}
+				dy={10}
 				textAnchor={textAnchor}
 				fill='#999'>
 				{` ${(percent * 100).toFixed(0)}%`}

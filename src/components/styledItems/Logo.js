@@ -7,8 +7,8 @@ export const Logo = styled.div`
 		width: 50px;
 		height: 50px;
 		@media (max-width: 700px) {
-			width: 40px;
-			height: 40px;
+			width: 35px;
+			height: 35px;
 		}
 	}
 	path {

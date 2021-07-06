@@ -9,9 +9,8 @@ to{
 `;
 
 export const Toggle = styled.div`
-
 	cursor: pointer;
-	
+
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -26,13 +25,15 @@ export const Toggle = styled.div`
 		font-size: 1.7rem;
 		transition: all 0.5s;
 		animation: ${iconAnimation} 1s ease-in-out;
+		@media (max-width: 700px) {
+			font-size: 1.5rem;
+		}
 		&:hover {
 			transform: rotate(360deg);
 		}
 	}
 	@media (max-width: 700px) {
-	
-		width: 50px;
-		height: 50px;
+		width: 45px;
+		height: 45px;
 	}
 `;
