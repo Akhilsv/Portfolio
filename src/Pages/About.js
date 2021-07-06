@@ -24,5 +24,9 @@ const AboutHolder = styled(motion.div)`
 	flex-direction: column;
 	align-items: center;
 	color: ${(p) => p.theme.color};
+	@media (max-width: 700px) {
+		padding-top: 30px;
+	}
+
 `;
 export default About;
