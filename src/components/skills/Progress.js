@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Bar from './Bar';
-
+import Example from './Example';
 const Progress = () => {
 	return (
 		<>
@@ -13,21 +13,22 @@ const Progress = () => {
 					<Bar name='Html' percentage='80' />
 					<Bar name='Css (SASS)' percentage='90' />
 				</ProgressBar>
-				
+				<ProgressBar>
+					<Example  />
+				</ProgressBar>
 			</ProgressHolder>
 		</>
 	);
 };
 const ProgressHolder = styled.div`
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	display: flex;
-
+	justify-content: space-between;
 	align-items: center;
 	@media (max-width: 700px) {
-	
 		flex-direction: column;
-		height: 100%;
+		overflow: scroll;
 	}
 `;
 const ProgressBar = styled.div`
@@ -37,20 +38,10 @@ const ProgressBar = styled.div`
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	flex-wrap: wrap;
+
 	@media (max-width: 700px) {
 		width: 90%;
-		height: 60vh;
 	}
-`;
-const RoundBar = styled.div`
-	width: 180px;
-	height: 180px;
-	background-color: red;
-	border-radius: 50%;
-	border: solid 10px transparent;
-	position: relative;
-	
 `;
 
 export default Progress;

@@ -40,9 +40,10 @@ export const Nav = ({ click, theme }) => {
 const NavBar = styled.div`
 	width: 100%;
 	height: 90px;
-	position: relative;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 30px 30px 0px 30px;
+	
 `;

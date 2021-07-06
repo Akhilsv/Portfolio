@@ -32,7 +32,7 @@ const Bar = ({ name, percentage }) => {
 };
 
 const BarBox = styled.div`
-	height: 15%;
+	height: 100px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;

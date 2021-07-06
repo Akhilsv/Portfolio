@@ -98,7 +98,7 @@ const OutLine = styled.div`
 		min-height: 100vh;
 		border: none;
 		border-radius: 0;
-		overflow: scroll;
+	
 	}
 `;
 
