@@ -20,8 +20,8 @@ const AboutHolder = styled(motion.div)`
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-direction: column;
-	background-color: red;
+	align-items: center;
+
 `;
 export default About;

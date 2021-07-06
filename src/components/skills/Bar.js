@@ -20,7 +20,7 @@ const Bar = ({ name, percentage }) => {
 				<Header>
 					<h1>{name}</h1>
 					<h1>
-						<CountUp end={Number(percentage)} duration={4} delay={0.4} />%
+						<CountUp end={Number(percentage)} duration={3} delay={0.5} />%
 					</h1>
 				</Header>
 				<BarLine>
@@ -67,6 +67,6 @@ const Fill = styled.div`
 	height: 10px;
 	background-color: #06ddec;
 	border-radius: 10px;
-	transition: all 4000ms ease;
+	transition: all 3000ms ease;
 `;
 export default Bar;

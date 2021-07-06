@@ -105,7 +105,6 @@ const NavLinks = styled(NavLink)`
 
 	&.selected {
 		color: #777;
-		opacity: 0.7;
 	}
 `;
 export default Menu;

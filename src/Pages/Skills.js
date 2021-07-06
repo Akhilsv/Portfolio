@@ -22,9 +22,9 @@ const SkillsHolder = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+
 	@media (max-width: 700px) {
 		padding: 30px 0 100px 0;
-		
 	}
 `;
 export default Skills;

@@ -45,6 +45,6 @@ const NavBar = styled.div`
 	align-items: center;
 	padding: 30px 30px 0px 30px;
 	@media (max-width: 700px) {
-		height: 50px;
+		height: 70px;
 	}
 `;
