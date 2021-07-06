@@ -1,16 +1,12 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { PieChart, Pie, Sector } from 'recharts';
+import { PieChart, Pie, Sector ,Cell } from 'recharts';
 
 const data = [
 	{ name: 'Frontend', value: 600 },
 	{ name: 'Backend', value: 300 },
 	{ name: 'Communication', value: 200 },
-	
-
 ];
-
-	
-
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 const renderActiveShape = (props) => {
 	const RADIAN = Math.PI / 180;
 	const {
@@ -34,7 +30,7 @@ const renderActiveShape = (props) => {
 	const my = cy + (outerRadius + 27) * sin;
 	const ex = mx + (cos >= 0 ? 1 : -1) * 22;
 	const ey = my;
-    const textAnchor = cos >= 0 ? 'start' : 'end';
+	const textAnchor = cos >= 0 ? 'start' : 'end';
 
 	return (
 		<g>
@@ -70,42 +66,41 @@ const renderActiveShape = (props) => {
 				y={ey}
 				dy={10}
 				textAnchor={textAnchor}
-				fill='#999'>
+				fill='#777777'>
 				{` ${(percent * 100).toFixed(0)}%`}
 			</text>
-			
 		</g>
 	);
 };
 
 export default function App() {
-    const [activeIndex, setActiveIndex] = useState(0);
-    
+	const [activeIndex, setActiveIndex] = useState(0);
+
 	const onPieEnter = useCallback(
 		(_, index) => {
 			setActiveIndex(index);
 		},
 		[setActiveIndex],
-    );
-    const [responsive, setResponsive] = useState(false);
+	);
+	const [responsive, setResponsive] = useState(false);
 
-		const handleResize = () => {
-			if (window.innerWidth < 700) {
-				setResponsive(true);
-			} else {
-				setResponsive(false);
-			}
+	const handleResize = () => {
+		if (window.innerWidth < 700) {
+			setResponsive(true);
+		} else {
+			setResponsive(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
 		};
-
-		useEffect(() => {
-			window.addEventListener('resize', handleResize);
-			return () => {
-				window.removeEventListener('resize', handleResize);
-			};
-		}, []);
+	}, []);
 
 	return (
-		<PieChart width={400} height={ 420}>
+		<PieChart width={400} height={420}>
 			<Pie
 				activeIndex={activeIndex}
 				activeShape={renderActiveShape}
@@ -117,8 +112,15 @@ export default function App() {
 				paddingAngle={5}
 				fill='#0ab1db'
 				dataKey='value'
-				onMouseEnter={onPieEnter}
-			/>
+				onMouseEnter={onPieEnter}>
+			{data.map((entry, index) => (
+								<Cell
+									stroke='none'
+									key={`cell-${index}`}
+									fill={COLORS[index % COLORS.length]}
+								/>
+							))}
+            </Pie>
 		</PieChart>
 	);
 }
