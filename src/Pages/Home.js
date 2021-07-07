@@ -34,12 +34,13 @@ const Homeholder = styled(motion.div)`
 	color: ${(p) => p.theme.color};
 	transition: color 0.5s;
 	margin: 50px 0px 50px 10px;
-	width:100%;
+	width: 100%;
 	height: 70%;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-items: center;
 	@media (max-width: 700px) {
+		flex-direction: column;
 		width: 95vw;
 	}
 `;
@@ -52,7 +53,6 @@ const Holders = styled.div`
 	@media (max-width: 700px) {
 		padding-left: 20px;
 	}
-	
 `;
 const H1 = styled.h1`
 	font-size: 5rem;
@@ -92,12 +92,14 @@ const IconHolder = styled.ul`
 
 const BlobHolder = styled.div`
 	height: 50%;
+	width: 50%;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 700px) {
+		height: 40%;
+	}
 `;
-const Blob = styled.img`
-	width: 500px;
-	height: 500px;
-`;
+
 export default Home;

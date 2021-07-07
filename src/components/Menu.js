@@ -31,7 +31,7 @@ const Menu = () => {
 					</NavLinks>
 				</li>
 				<li>
-					<NavLinks to='/home' name='Contact'>
+					<NavLinks to='/contact' name='Contact'>
 						<BiMessageSquareDetail />
 					</NavLinks>
 				</li>
@@ -42,6 +42,8 @@ const Menu = () => {
 
 const MenuHolder = styled.ul`
 	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	z-index: 100;
 	background-color: ${(p) => p.theme.color};
 	font-size: 1.5rem;
@@ -75,7 +77,6 @@ const MenuHolder = styled.ul`
 		font-weight: 900;
 
 		&:hover {
-			
 			color: red;
 		}
 	}

@@ -9,10 +9,10 @@ import Skills from './Pages/Skills';
 import { useState } from 'react';
 import { darkTheme, lightTheme } from './Theme';
 import { Nav } from './components/Nav/Nav';
+import Contact from './Pages/Contact';
 
 function App() {
 	const location = useLocation();
-
 	const pageVarient = {
 		initial: {
 			opacity: 0,
@@ -27,6 +27,7 @@ function App() {
 			x: '-100vw',
 		},
 	};
+
 	const [isDarkMode, setIsDarkMode] = useState(true);
 	const pageTransition = {
 		type: 'spring',
@@ -57,6 +58,10 @@ function App() {
 								<Route exact path='/skills'>
 									<Skills framer={pageVarient} transition={pageTransition} />
 								</Route>
+								<Route exact path='/contact'>
+									<Contact framer={pageVarient} transition={pageTransition} />
+								</Route>
+
 								<Route exact path='*'>
 									<Redirect to='/home' />
 								</Route>
@@ -98,7 +103,6 @@ const OutLine = styled.div`
 		min-height: 100vh;
 		border: none;
 		border-radius: 0;
-	
 	}
 `;
 

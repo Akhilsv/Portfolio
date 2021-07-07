@@ -27,6 +27,5 @@ const AboutHolder = styled(motion.div)`
 	@media (max-width: 700px) {
 		padding-top: 30px;
 	}
-
 `;
 export default About;

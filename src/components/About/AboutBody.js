@@ -34,8 +34,8 @@ const Body = styled.div`
 	p {
 		font-family: 'Montserrat', sans-serif;
 		letter-spacing: 3px;
-		opacity: 0.8;
-		font-weight: 500;
+		opacity: 0.6;
+		font-weight: 600;
 	}
 	@media (max-width: 700px) {
 		padding: 30px;

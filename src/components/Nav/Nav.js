@@ -8,9 +8,12 @@ export const Nav = ({ click, theme }) => {
 	return (
 		<>
 			<NavBar>
-				<Toggle onClick={click}>
-					<p>{theme ? <FiMoon /> : <FiSun />}</p>
-				</Toggle>
+				<Holder>
+					<Toggle onClick={click}>
+						<p>{theme ? <FiMoon /> : <FiSun />}</p>
+					</Toggle>
+					<h1>{theme ? `"#000000"` : `"#FFFFFF"`} </h1>
+				</Holder>
 				<Logo>
 					<svg
 						width='53'
@@ -46,5 +49,18 @@ const NavBar = styled.div`
 	padding: 30px 30px 0px 30px;
 	@media (max-width: 700px) {
 		height: 70px;
+	}
+`;
+const Holder = styled.div`
+	display: flex;
+
+	h1 {
+		
+		font-family: 'Permanent Marker', cursive;
+		color: ${(p) => p.theme.color};
+		font-size: 0.8rem;
+		font-weight: 400;
+		padding: 10px 0 0 10px;
+		letter-spacing: 2px;
 	}
 `;
