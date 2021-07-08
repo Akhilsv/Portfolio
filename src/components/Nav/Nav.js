@@ -49,6 +49,7 @@ const NavBar = styled.div`
 	padding: 30px 30px 0px 30px;
 	@media (max-width: 700px) {
 		height: 70px;
+		padding: 25px 10px 0px 10px;
 	}
 `;
 const Holder = styled.div`
