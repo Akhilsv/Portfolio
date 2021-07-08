@@ -37,7 +37,7 @@ const Homeholder = styled(motion.div)`
 	width: 100%;
 	height: 70%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 	@media (max-width: 700px) {
 		flex-direction: column;

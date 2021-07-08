@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import ContactFrom from '../components/contact/ContactFrom';
 
 const Contact = ({ framer, transition }) => {
 	return (
@@ -11,25 +12,22 @@ const Contact = ({ framer, transition }) => {
 			exit='out'
 			variants={framer}
 			transition={transition}>
-			<h1>Let's talk</h1>
-			<img src='assets/meet.svg'></img>
+			<ContactFrom />
 		</ContactHolder>
 	);
 };
 const ContactHolder = styled(motion.div)`
-	width: 100%;
+	width: 80%;
 	height: 100%;
 	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
+	justify-content: space-around;
 	align-items: center;
 	color: ${(p) => p.theme.color};
-	img {
-		width:300px;
-		height:300px;
-	}
 	@media (max-width: 700px) {
+		width: 100%;
 		padding-top: 30px;
+		flex-direction: column;
+		justify-content: flex-start;
 	}
 `;
 export default Contact;
