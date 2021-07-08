@@ -29,7 +29,7 @@ const ContactHolder = styled(motion.div)`
 		flex-direction: column;
 		justify-content: flex-start;
 		overflow: scroll;
-		padding-bottom: 50px;
+		padding-bottom: 30px;
 	}
 `;
 export default Contact;

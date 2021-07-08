@@ -41,6 +41,7 @@ const ContactSvg = styled.div`
 	}
 `;
 const BodyHolder = styled.div`
+	height: 100%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -49,7 +50,6 @@ const BodyHolder = styled.div`
 		width: 65%;
 		height: 65%;
 	}
-
 `;
 const Details = styled.div`
 	width: 70%;
@@ -60,9 +60,10 @@ const Details = styled.div`
 	align-items: center;
 	h1 {
 		opacity: 0.8;
-		font-family: 'Rubik', cursive;
-		font-size: 0.6rem;
-		letter-spacing: 3px;
+		font-family: 'Montserrat', cursive;
+		font-size: 0.7rem;
+		letter-spacing: 2px;
+		font-weight: 700;
 	}
 	h2 {
 		font-family: 'Permanent Marker', cursive;
@@ -91,11 +92,12 @@ const Form = styled.form`
 		height: 40px;
 		outline: none;
 		border: none;
-		border-bottom: solid 1px #0000009d;
+
 		border-radius: 10px;
-		background: #0000009d;
+		background: ${(p) => p.theme.inputBackground};
 	}
 	textarea {
+		resize: none;
 		color: ${(p) => p.theme.color};
 		letter-spacing: 3px;
 		font-weight: 700;
@@ -105,20 +107,20 @@ const Form = styled.form`
 		outline: none;
 		border: none;
 		border-radius: 10px;
-		background: #0000009d;
+		background: ${(p) => p.theme.inputBackground};
 		@media (max-width: 700px) {
 			height: 90px;
 		}
 	}
 	button {
-		color: #808080;
+		color: ${(p) => p.theme.color};
 		outline: none;
 		border: none;
 		width: 100%;
 		height: 50px;
 		padding: 5px 20px;
 		border-radius: 10px;
-		background: #3332329d;
+		background: ${(p) => p.theme.btnBackground};
 		font-weight: 700;
 		letter-spacing: 3px;
 	}
