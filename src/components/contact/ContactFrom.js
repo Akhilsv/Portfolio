@@ -80,7 +80,7 @@ const Form = styled.form`
 	color: ${(p) => p.theme.color};
 	@media (max-width: 700px) {
 		width: 90%;
-		height: 50%;
+		height: 300px;
 	}
 	input {
 		color: ${(p) => p.theme.color};
