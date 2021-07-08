@@ -24,7 +24,7 @@ const ContactHolder = styled(motion.div)`
 	align-items: center;
 	color: ${(p) => p.theme.color};
 	@media (max-width: 700px) {
-		width: 100%;
+		width: 98%;
 		padding-top: 30px;
 		flex-direction: column;
 		justify-content: flex-start;

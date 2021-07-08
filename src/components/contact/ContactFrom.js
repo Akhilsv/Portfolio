@@ -8,10 +8,10 @@ const ContactFrom = () => {
 	return (
 		<>
 			<ContactSvg>
-				<h1>Let's Talk</h1>
 				<BodyHolder>
 					<img src='assets/meet.svg'></img>
 					<Details>
+						<h2>Let's Talk</h2>
 						<h1>akhilsvbhat@gmail.com</h1>
 						<h1>+91 9731990672</h1>
 						<h1>Karnataka | India</h1>
@@ -30,7 +30,7 @@ const ContactFrom = () => {
 
 const ContactSvg = styled.div`
 	width: 45%;
-	height: 70%;
+	height: 80%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -38,28 +38,22 @@ const ContactSvg = styled.div`
 	@media (max-width: 700px) {
 		width: 100%;
 		height: 35%;
-		h1 {
-			font-size: 1rem;
-		}
-	}
-	h1 {
-		font-family: 'Permanent Marker', cursive;
-		letter-spacing: 3px;
 	}
 `;
 const BodyHolder = styled.div`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
 	img {
 		width: 65%;
 		height: 65%;
 	}
-	
+
 `;
 const Details = styled.div`
 	width: 70%;
-	height: 50%;
+	height: 70%;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
@@ -68,8 +62,13 @@ const Details = styled.div`
 		opacity: 0.8;
 		font-family: 'Rubik', cursive;
 		font-size: 0.6rem;
+		letter-spacing: 3px;
 	}
-	
+	h2 {
+		font-family: 'Permanent Marker', cursive;
+		letter-spacing: 3px;
+		font-size: 1.3rem;
+	}
 `;
 const Form = styled.form`
 	width: 40%;
@@ -116,10 +115,10 @@ const Form = styled.form`
 		outline: none;
 		border: none;
 		width: 100%;
-		height: 30px;
+		height: 50px;
 		padding: 5px 20px;
 		border-radius: 10px;
-		background: #0000009d;
+		background: #3332329d;
 		font-weight: 700;
 		letter-spacing: 3px;
 	}
