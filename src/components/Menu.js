@@ -26,12 +26,12 @@ const Menu = () => {
 					</NavLinks>
 				</li>
 				<li>
-					<NavLinks to='/home' name='Work'>
+					<NavLinks to='/work' name='Work' activeClassName='selected'>
 						<BsEye />
 					</NavLinks>
 				</li>
 				<li>
-					<NavLinks to='/contact' name='Contact'>
+					<NavLinks to='/contact' name='Contact' activeClassName='selected'>
 						<BiMessageSquareDetail />
 					</NavLinks>
 				</li>

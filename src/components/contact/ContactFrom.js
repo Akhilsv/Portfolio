@@ -78,6 +78,7 @@ const Form = styled.form`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
+	transition: all 0.5s ease;
 	color: ${(p) => p.theme.color};
 	@media (max-width: 700px) {
 		width: 90%;

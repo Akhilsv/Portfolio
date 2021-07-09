@@ -18,7 +18,7 @@ const Contact = ({ framer, transition }) => {
 };
 const ContactHolder = styled(motion.div)`
 	width: 80%;
-	height: 100%;
+	height: 100vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;

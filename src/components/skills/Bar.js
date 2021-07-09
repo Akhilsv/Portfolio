@@ -58,7 +58,7 @@ const Header = styled.div`
 const BarLine = styled.div`
 	width: 100%;
 	height: 10px;
-	background-color: #00000099;
+	background-color: #000000c1;
 	border-radius: 10px;
 	display: inline;
 `;

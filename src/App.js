@@ -6,6 +6,7 @@ import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import About from './Pages/About';
 import Skills from './Pages/Skills';
+import Work from './Pages/Work';
 import { useState } from 'react';
 import { darkTheme, lightTheme } from './Theme';
 import { Nav } from './components/Nav/Nav';
@@ -55,8 +56,13 @@ function App() {
 								<Route exact path='/about'>
 									<About framer={pageVarient} transition={pageTransition} />
 								</Route>
+
 								<Route exact path='/skills'>
 									<Skills framer={pageVarient} transition={pageTransition} />
+								</Route>
+
+								<Route exact path='/work'>
+									<Work framer={pageVarient} transition={pageTransition} />
 								</Route>
 								<Route exact path='/contact'>
 									<Contact framer={pageVarient} transition={pageTransition} />

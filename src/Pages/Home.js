@@ -25,6 +25,64 @@ const Home = ({ framer, transition }) => {
 						</li>
 					</IconHolder>
 				</Holders>
+				<TvHolder>
+					<svg
+						width='360'
+						height='336'
+						viewBox='0 0 360 336'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'>
+						<rect
+							x='2'
+							y='58'
+							width='356'
+							height='250'
+							rx='30'
+							fill='#202020d6'
+							stroke='white'
+							strokeWidth='3'
+						/>
+						<rect x='37' y='89' width='284' height='179' rx='30' fill='white' />
+						<path
+							id='path-leg'
+							d='M37 308H62V326C62 331.523 57.5228 336 52 336H37V308Z'
+							fill='white'
+						/>
+						<path
+							id='path-leg'
+							d='M296 308H321V336H306C300.477 336 296 331.523 296 326V308Z'
+							fill='white'
+						/>
+						<ellipse
+							cx='150.5'
+							cy='287'
+							rx='10.5'
+							ry='7'
+							fill='white'
+							id='tv-on-button'
+						/>
+						<ellipse cx='207.5' cy='287' rx='10.5' ry='7' fill='white' />
+						<line
+							x1='134.125'
+							y1='4.00806'
+							x2='180.416'
+							y2='56.5169'
+							stroke='white'
+							strokeWidth='3'
+						/>
+						<line
+							y1='-1.5'
+							x2='50'
+							y2='-1.5'
+							transform='matrix(-0.661295 0.750126 0.750126 0.661295 212.065 20)'
+							stroke='white'
+							strokeWidth='3'
+						/>
+						<ellipse cx='182' cy='58.5' rx='31' ry='7.5' fill='white' />
+						<circle id='circle1' cx='135' cy='5' r='5' fill='#E8E8E8' />
+						<circle cx='213' cy='15' r='5' fill='#C4C4C4' />
+					</svg>
+				</TvHolder>
 			</Homeholder>
 		</>
 	);
@@ -33,23 +91,24 @@ const Home = ({ framer, transition }) => {
 const Homeholder = styled(motion.div)`
 	color: ${(p) => p.theme.color};
 	transition: color 0.5s;
-	margin: 50px 0px 50px 10px;
+
 	width: 100%;
 	height: 70%;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-evenly;
 	align-items: center;
 	@media (max-width: 700px) {
 		flex-direction: column;
 		width: 95vw;
+		height:80%;
 	}
 `;
 const Holders = styled.div`
-	height: 100%;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 70px;
+
 	@media (max-width: 700px) {
 		padding-left: 20px;
 	}
@@ -89,17 +148,23 @@ const IconHolder = styled.ul`
 		}
 	}
 `;
-
-const BlobHolder = styled.div`
-	height: 50%;
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+const TvHolder = styled.div`
+	height: 350px;
+	width: 350px;
+	position: relative;
+	z-index: -2;
+	pointer-events: all;
 	@media (max-width: 700px) {
-		height: 40%;
+		height: 200px;
+		width: 200px;
+	}
+	svg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 `;
-
 export default Home;
