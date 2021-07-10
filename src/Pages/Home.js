@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
@@ -26,6 +26,7 @@ const Home = ({ framer, transition }) => {
 					</IconHolder>
 				</Holders>
 				<TvHolder>
+					<img src='assets/Akhil.JPG' alt='me' />
 					<svg
 						width='360'
 						height='336'
@@ -46,22 +47,22 @@ const Home = ({ framer, transition }) => {
 						<path
 							id='path-leg'
 							d='M37 308H62V326C62 331.523 57.5228 336 52 336H37V308Z'
-							fill='white'
+							fill='#E8E8E8'
 						/>
 						<path
 							id='path-leg'
 							d='M296 308H321V336H306C300.477 336 296 331.523 296 326V308Z'
-							fill='white'
+							fill='#E8E8E8'
 						/>
 						<ellipse
 							cx='150.5'
 							cy='287'
 							rx='10.5'
 							ry='7'
-							fill='white'
+							fill='#E8E8E8'
 							id='tv-on-button'
 						/>
-						<ellipse cx='207.5' cy='287' rx='10.5' ry='7' fill='white' />
+						<ellipse cx='207.5' cy='287' rx='10.5' ry='7' fill='#E8E8E8' />
 						<line
 							x1='134.125'
 							y1='4.00806'
@@ -80,8 +81,9 @@ const Home = ({ framer, transition }) => {
 						/>
 						<ellipse cx='182' cy='58.5' rx='31' ry='7.5' fill='white' />
 						<circle id='circle1' cx='135' cy='5' r='5' fill='#E8E8E8' />
-						<circle cx='213' cy='15' r='5' fill='#C4C4C4' />
+						<circle cx='213' cy='15' r='5' fill='#E8E8E8' />
 					</svg>
+					<Noise></Noise>
 				</TvHolder>
 			</Homeholder>
 		</>
@@ -91,7 +93,6 @@ const Home = ({ framer, transition }) => {
 const Homeholder = styled(motion.div)`
 	color: ${(p) => p.theme.color};
 	transition: color 0.5s;
-
 	width: 100%;
 	height: 70%;
 	display: flex;
@@ -100,11 +101,10 @@ const Homeholder = styled(motion.div)`
 	@media (max-width: 700px) {
 		flex-direction: column;
 		width: 95vw;
-		height:80%;
+		height: 80%;
 	}
 `;
 const Holders = styled.div`
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -138,22 +138,27 @@ const IconHolder = styled.ul`
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;
-
+	@media (max-width: 700px) {
+		width: 100px;
+	}
 	& li {
 		text-decoration: none;
 		font-size: 3rem;
 		transition: color 0.5s ease;
+		@media (max-width: 700px) {
+			font-size: 2rem;
+		}
 		&:hover {
 			color: #6d6d6d;
 		}
 	}
 `;
 const TvHolder = styled.div`
-	height: 350px;
-	width: 350px;
+	height: 300px;
+	width: 300px;
 	position: relative;
-	z-index: -2;
 	pointer-events: all;
+
 	@media (max-width: 700px) {
 		height: 200px;
 		width: 200px;
@@ -166,5 +171,56 @@ const TvHolder = styled.div`
 		top: 50%;
 		transform: translate(-50%, -50%);
 	}
+	img {
+		position: absolute;
+		left: 50%;
+		top: 53%;
+		opacity: 0.7;
+		z-index:12;
+		transform: translate(-50%, -50%);
+		border-radius: 20px;
+		width: 80%;
+		height: 50%;
+	}
 `;
+const noise = keyframes`
+0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 100% 100%;
+  }
+
+`;
+const Noise = styled.div`
+	position: absolute;
+	left: 50%;
+	top: 53%;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	width: 80%;
+	height: 50%;
+	background-image: url(${'assets/noise.jpeg'});
+	animation: ${noise} 2.5s linear infinite;
+`;
+
+const Glitch__layers = styled.div`
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+`;
+const Glitch__layer = styled.div`
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+`;
+
 export default Home;
