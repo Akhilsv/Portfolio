@@ -160,8 +160,8 @@ const TvHolder = styled.div`
 	pointer-events: all;
 
 	@media (max-width: 700px) {
-		height: 200px;
-		width: 200px;
+		height: 280px;
+		width: 280px;
 	}
 	svg {
 		width: 100%;
@@ -175,7 +175,7 @@ const TvHolder = styled.div`
 		position: absolute;
 		left: 50%;
 		top: 53%;
-		opacity: 0.7;
+		opacity: 0.8;
 		z-index:12;
 		transform: translate(-50%, -50%);
 		border-radius: 20px;
