@@ -11,8 +11,9 @@ const AboutBody = () => {
 				built some personal projects to enhance my skills and gain some expernices in this filed and i
 				also played with node js ,firebase and sql for backend development.since
 				my major is computer science so have knowledge on c c++ python.
-			</p>
-			<p>
+			<br />
+			<br />
+			<br />
 				Self-motivated, highly passionate and hardworking fresher looking for an
 				opportunity to work in a challenging organization to utilize my skills
 				and knowledge to work for the growth of the organization.
