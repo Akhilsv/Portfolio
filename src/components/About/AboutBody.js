@@ -30,22 +30,20 @@ const Body = styled.div`
 	width: 90%;
 	height: 80%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;
 	font-size: 1rem;
 	p {
 		width: 100%;
-
 		font-family: 'Montserrat', sans-serif;
 		letter-spacing: 3px;
 		opacity: 0.6;
 		font-weight: 600;
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 	}
 	@media (max-width: 700px) {
 		width: 100%;
-
 		overflow: scroll;
 		min-height: 100vh;
 		padding-bottom: 150px;
