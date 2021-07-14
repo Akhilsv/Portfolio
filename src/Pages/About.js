@@ -23,9 +23,13 @@ const AboutHolder = styled(motion.div)`
 	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 20px;
+
 	color: ${(p) => p.theme.color};
 	@media (max-width: 700px) {
-		padding-top: 30px;
+		margin-top: 20px;
+		padding-bottom: 50px;
+		overflow: scroll;
 	}
 `;
 export default About;
