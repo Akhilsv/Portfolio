@@ -46,7 +46,7 @@ const Body = styled.div`
 		justify-content: space-around;
 		width: 100%;
 		overflow: scroll;
-		min-height: 100vh;
+		min-height: 85vh;
 		padding-bottom: 150px;
 		padding: 0 30px;
 		font-size: 0.8rem;
