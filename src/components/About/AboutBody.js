@@ -47,7 +47,7 @@ const Body = styled.div`
 		overflow: scroll;
 		min-height: 100vh;
 		padding-bottom: 150px;
-		padding: 30px;
+		padding: 0 30px;
 		font-size: 0.8rem;
 	}
 `;
