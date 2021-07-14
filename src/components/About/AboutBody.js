@@ -43,7 +43,7 @@ const Body = styled.div`
 		padding-bottom: 5px;
 	}
 	@media (max-width: 700px) {
-		justify-content: flex-start;
+		justify-content: space-around;
 		width: 100%;
 		overflow: scroll;
 		min-height: 100vh;
