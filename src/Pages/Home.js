@@ -26,7 +26,6 @@ const Home = ({ framer, transition }) => {
 					</IconHolder>
 				</Holders>
 				<TvHolder>
-					<img src='assets/Akhil.JPG' alt='me' />
 					<svg
 						width='360'
 						height='336'
@@ -42,17 +41,25 @@ const Home = ({ framer, transition }) => {
 							fill='#202020d6'
 							stroke='white'
 							strokeWidth='3'
+							className='out-rect'
 						/>
-						<rect x='37' y='89' width='284' height='179' rx='30' fill='white' />
+						<rect
+							x='37'
+							y='89'
+							width='284'
+							height='179'
+							rx='30'
+							fill='#8b8b8b'
+						/>
 						<path
 							id='path-leg'
 							d='M37 308H62V326C62 331.523 57.5228 336 52 336H37V308Z'
-							fill='#E8E8E8'
+							fill='#858585'
 						/>
 						<path
 							id='path-leg'
 							d='M296 308H321V336H306C300.477 336 296 331.523 296 326V308Z'
-							fill='#E8E8E8'
+							fill='#858585'
 						/>
 						<ellipse
 							cx='150.5'
@@ -79,11 +86,10 @@ const Home = ({ framer, transition }) => {
 							stroke='white'
 							strokeWidth='3'
 						/>
-						<ellipse cx='182' cy='58.5' rx='31' ry='7.5' fill='white' />
+						<ellipse cx='182' cy='58.5' rx='31' ry='7.5' fill='#858585' />
 						<circle id='circle1' cx='135' cy='5' r='5' fill='#E8E8E8' />
 						<circle cx='213' cy='15' r='5' fill='#E8E8E8' />
 					</svg>
-					<Noise></Noise>
 				</TvHolder>
 			</Homeholder>
 		</>
@@ -99,7 +105,7 @@ const Homeholder = styled(motion.div)`
 	justify-content: space-evenly;
 	align-items: center;
 	@media (max-width: 700px) {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		width: 95vw;
 		height: 80%;
 	}
@@ -108,7 +114,6 @@ const Holders = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
 	@media (max-width: 700px) {
 		padding-left: 20px;
 	}
@@ -171,12 +176,15 @@ const TvHolder = styled.div`
 		top: 50%;
 		transform: translate(-50%, -50%);
 	}
+	& .out-rect {
+		fill: ${(p) => p.theme.tvOutRect};
+	}
 	img {
 		position: absolute;
 		left: 50%;
 		top: 53%;
-		opacity: 0.8;
-		z-index:12;
+		opacity: 0.9;
+		z-index: 12;
 		transform: translate(-50%, -50%);
 		border-radius: 20px;
 		width: 80%;

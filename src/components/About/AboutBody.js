@@ -41,7 +41,7 @@ const Body = styled.div`
 		letter-spacing: 3px;
 		opacity: 0.6;
 		font-weight: 600;
-		padding-bottom: 5px;
+	
 	}
 	@media (max-width: 700px) {
 		justify-content: space-around;
@@ -54,6 +54,7 @@ const Body = styled.div`
 	}
 `;
 const Resume = styled.div`
+	margin-top: 20px;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -66,6 +67,10 @@ const Resume = styled.div`
 		height:40px;
 		border-radius: 50px;
 		font-weight: 600;
+		@media (max-width: 700px) {
+			width:100px;
+			height:35px;
+		}
 	}
 	img {
 		width: 100px;

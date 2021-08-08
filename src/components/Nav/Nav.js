@@ -56,12 +56,14 @@ const Holder = styled.div`
 	display: flex;
 
 	h1 {
-		
 		font-family: 'Permanent Marker', cursive;
 		color: ${(p) => p.theme.color};
 		font-size: 0.8rem;
 		font-weight: 400;
 		padding: 10px 0 0 10px;
 		letter-spacing: 2px;
+		@media (max-width: 700px) {
+			display: none;
+		}
 	}
 `;
