@@ -11,4 +11,10 @@ export const ProjectData = [
 		img: 'assets/FoodOrderApp.webp',
 		link: 'https://food-ordering-web-app.netlify.app/',
 	},
+	{
+		id: '3',
+		name: 'Blog-House',
+		img: 'assets/Blog-house.webp',
+		link: 'https://jokesbook.netlify.app',
+	},
 ];
