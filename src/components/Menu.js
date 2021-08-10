@@ -76,9 +76,7 @@ const MenuHolder = styled.ul`
 		text-decoration: none;
 		font-weight: 900;
 
-		&:hover {
-			color: red;
-		}
+		
 	}
 `;
 const NavLinks = styled(NavLink)`
@@ -89,6 +87,21 @@ const NavLinks = styled(NavLink)`
 	position: relative;
 	cursor: pointer;
 	transition: color 0.5s ease;
+	/* &:hover {
+		&::before {
+			position: absolute;
+			content: '${(prop) => prop.name}';
+			width: 80px;
+			height: 40px;
+			background-color: ${(p) => p.theme.color};
+			left: -90px;
+			border-radius: 20px;
+			font-size: 1rem;
+			display: grid;
+			place-items: center;
+			font-weight: 500;
+		}
+	} */
 	@media (max-width: 700px) {
 		&::after {
 			font-family: 'Raleway', sans-serif;
