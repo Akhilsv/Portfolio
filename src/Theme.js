@@ -11,7 +11,7 @@ export const darkTheme = {
 	background: '#0e0e0e',
 	color: '#f5f5f5',
 	border: '#e9e9e9',
-	inputBackground: '#05050593',
+	inputBackground: '#050505dd',
 	btnBackground: '#000000',
 	tvOutRect: '#1b1b1bd5',
 };
