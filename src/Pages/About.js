@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AboutBody from '../components/About/AboutBody';
+
 const About = ({ framer, transition }) => {
 	return (
 		<AboutHolder

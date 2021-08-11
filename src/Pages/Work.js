@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import WorkHolder from '../components/Work/WorkHolder';
 import { ProjectData } from '../components/Work/ProjectData';
 
+
 const Work = ({ framer, transition }) => {
 	console.log(ProjectData);
 	return (
