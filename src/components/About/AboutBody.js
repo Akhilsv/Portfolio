@@ -63,6 +63,16 @@ const Resume = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
+	img {
+		width: 100px;
+	}
+`;
+const Holder = styled.div`
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	button {
 		outline: none;
 		border: none;
@@ -72,22 +82,14 @@ const Resume = styled.div`
 		border-radius: 50px;
 		font-weight: 600;
 		@media (max-width: 700px) {
-			width: 100px;
+			width: 100%;
 			height: 35px;
 		}
 	}
-	img {
-		width: 100px;
-	}
-`;
-const Holder = styled.div`
-	width: 40%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	@media (max-width: 750px) {
 		flex-direction: column-reverse;
-		height:100%;
+		width: 50%;
+		height: 100%;
 	}
 `;
 const SocialMediaICons = styled.div`
