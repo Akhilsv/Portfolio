@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
+import ErrorModel from '../ErrorModel/ErrorModel';
 
 const ContactFrom = () => {
+	const [message, setMessage] = useState(false);
 	const submitHandler = (e) => {
 		e.preventDefault();
 		emailjs
@@ -15,6 +17,7 @@ const ContactFrom = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
+					setMessage('Email sent')
 				},
 				(error) => {
 					console.log(error.text);
@@ -24,9 +27,10 @@ const ContactFrom = () => {
 	};
 	return (
 		<>
+			{ message && <ErrorModel state={[message, setMessage]} />}
 			<ContactSvg>
 				<BodyHolder>
-					<img src='assets/meet.svg' alt="Meeting"></img>
+					<img src='assets/meet.svg' alt='Meeting'></img>
 					<Details>
 						<h2>Let's Talk</h2>
 						<h1>akhilsvbhat@gmail.com</h1>

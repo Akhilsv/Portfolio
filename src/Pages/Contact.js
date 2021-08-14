@@ -20,6 +20,7 @@ const ContactHolder = styled(motion.div)`
 	width: 80%;
 	height: 100vh;
 	display: flex;
+
 	justify-content: space-around;
 	align-items: center;
 	color: ${(p) => p.theme.color};

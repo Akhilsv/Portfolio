@@ -25,7 +25,7 @@ const Home = ({ framer, transition }) => {
 						</li>
 					</IconHolder>
 				</Holders>
-				<TvHolder>
+				{/* <TvHolder>
 					<svg
 						width='360'
 						height='336'
@@ -90,7 +90,7 @@ const Home = ({ framer, transition }) => {
 						<circle id='circle1' cx='135' cy='5' r='5' fill='#E8E8E8' />
 						<circle cx='213' cy='15' r='5' fill='#E8E8E8' />
 					</svg>
-				</TvHolder>
+				</TvHolder> */}
 			</Homeholder>
 		</>
 	);
