@@ -7,7 +7,7 @@ const WorkHolder = ({ data }) => {
 		<Card>
 			<h1>{data.name}</h1>
 			<img src={data.img} alt={data.name} />
-			<a href={data.link} target="_blank">
+			<a href={data.link} target='_blank' rel='noreferrer'>
 				<FaLink />
 			</a>
 		</Card>
@@ -29,6 +29,7 @@ const Card = styled.div`
 		width: 100%;
 		height: 100%;
 		border-radius: 20px;
+
 	}
 	h1 {
 		width: fit-content;

@@ -1,15 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 const ContactFrom = () => {
 	const submitHandler = (e) => {
 		e.preventDefault();
+		emailjs
+			.sendForm(
+				'Gmail',
+				'portfolio_template',
+				e.target,
+				`user_AelEIK0KDSfOO7vwJS0NP`,
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				},
+			);
+		e.target.reset();
 	};
 	return (
 		<>
 			<ContactSvg>
 				<BodyHolder>
-					<img src='assets/meet.svg'></img>
+					<img src='assets/meet.svg' alt="Meeting"></img>
 					<Details>
 						<h2>Let's Talk</h2>
 						<h1>akhilsvbhat@gmail.com</h1>
@@ -18,10 +35,14 @@ const ContactFrom = () => {
 					</Details>
 				</BodyHolder>
 			</ContactSvg>
-			<Form onClick={submitHandler}>
-				<input type='text' placeholder='Name' autoComplete='off' />
-				<input type='email' placeholder='Email' />
-				<textarea type='text' placeholder='Enter what you are thinking' />
+			<Form onSubmit={submitHandler}>
+				<input type='text' placeholder='Name' autoComplete='off' name='name' />
+				<input type='email' placeholder='Email' name='email' />
+				<textarea
+					type='text'
+					placeholder='Enter what you are thinking'
+					name='message'
+				/>
 				<button type='submit'>Send</button>
 			</Form>
 		</>

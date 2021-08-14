@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import CountUp from 'react-countup';
 
 const Bar = ({ name, percentage }) => {

@@ -20,7 +20,6 @@ const renderActiveShape = (props) => {
 		fill,
 		payload,
 		percent,
-		value,
 	} = props;
 	const sin = Math.sin(-RADIAN * midAngle);
 	const cos = Math.cos(-RADIAN * midAngle);
@@ -82,7 +81,7 @@ export default function App() {
 		},
 		[setActiveIndex],
 	);
-	const [responsive, setResponsive] = useState(false);
+	const [ setResponsive] = useState(false);
 
 	const handleResize = () => {
 		if (window.innerWidth < 700) {
@@ -97,6 +96,7 @@ export default function App() {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
+		// eslint-disable-next-line
 	}, []);
 
 	return (

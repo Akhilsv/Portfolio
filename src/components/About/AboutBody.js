@@ -26,7 +26,7 @@ const AboutBody = () => {
 						<AiFillLinkedin />
 					</SocialMediaICons>
 				</Holder>
-				<img src='assets/qr-scanner.png' />
+				<img src='assets/qr-scanner.png' alt="Scanner"/>
 			</Resume>
 		</Body>
 	);

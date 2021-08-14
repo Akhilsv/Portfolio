@@ -2,7 +2,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import './App.css';
 import Home from './Pages/Home';
 import Menu from './components/Menu';
-import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import About from './Pages/About';
 import Skills from './Pages/Skills';
@@ -13,7 +13,7 @@ import { Nav } from './components/Nav/Nav';
 import Contact from './Pages/Contact';
 
 function App() {
-	const location = useLocation();
+
 	const pageVarient = {
 		initial: {
 			opacity: 0,

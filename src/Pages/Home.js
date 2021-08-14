@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
@@ -191,44 +191,44 @@ const TvHolder = styled.div`
 		height: 50%;
 	}
 `;
-const noise = keyframes`
-0%{
-    background-position: 0 0;
-  }
-  100%{
-    background-position: 100% 100%;
-  }
+// const noise = keyframes`
+// 0%{
+//     background-position: 0 0;
+//   }
+//   100%{
+//     background-position: 100% 100%;
+//   }
 
-`;
-const Noise = styled.div`
-	position: absolute;
-	left: 50%;
-	top: 53%;
-	opacity: 1;
-	transform: translate(-50%, -50%);
-	border-radius: 20px;
-	width: 80%;
-	height: 50%;
-	background-image: url(${'assets/noise.jpeg'});
-	animation: ${noise} 2.5s linear infinite;
-`;
+// `;
+// const Noise = styled.div`
+// 	position: absolute;
+// 	left: 50%;
+// 	top: 53%;
+// 	opacity: 1;
+// 	transform: translate(-50%, -50%);
+// 	border-radius: 20px;
+// 	width: 80%;
+// 	height: 50%;
+// 	background-image: url(${'assets/noise.jpeg'});
+// 	animation: ${noise} 2.5s linear infinite;
+// `;
 
-const Glitch__layers = styled.div`
-	position: absolute;
-	z-index: 2;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-`;
-const Glitch__layer = styled.div`
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-`;
+// const Glitch__layers = styled.div`
+// 	position: absolute;
+// 	z-index: 2;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// `;
+// const Glitch__layer = styled.div`
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// 	background-repeat: no-repeat;
+// 	background-position: 0 0;
+// `;
 
 export default Home;
